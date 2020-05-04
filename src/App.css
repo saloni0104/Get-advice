@@ -1,0 +1,36 @@
+#root, html, body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.app {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+}
+
+.card{
+    background-color: whitesmoke;
+    width: 65%;
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 25px;
+    box-shadow: 10px 10px;
+}
+
+.heading{
+    display: flex;
+    align-items: center;
+    height: 580px;
+    font-family: 'Spartan', sans-serif;
+}
+
+
