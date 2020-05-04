@@ -15,7 +15,12 @@ class App extends React.Component {
     fetchAdvice = () => {
         axios.get('https://api.adviceslip.com/advice')
             .then((response) => {
-                console.log(response.data.slip.advice);         //fetching just the quote from whole lot of data
+                const {advice } = response.data.slip;
+                console.log(advice);
+                //instead of
+                //console.log(response.data.slip.advice);         //fetching just the quote from whole lot of data
+                
+                this.setState({ advice});       //setting the value advice from line 18 to state advice from line 8
             })
             .catch((error) => {
                 console.log(error);
@@ -23,8 +28,12 @@ class App extends React.Component {
     }
 
     render() {
+        const {advice} = this.state;
+
         return(
-            <h1>APP</h1>
+            <h1>{advice}</h1>
+            //instead of
+            //<h1>{this.state.advice}</h1>
         );
     }
 }
