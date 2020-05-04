@@ -15,7 +15,7 @@ class App extends React.Component {
     fetchAdvice = () => {
         axios.get('https://api.adviceslip.com/advice')
             .then((response) => {
-                console.log(response);
+                console.log(response.data.slip.advice);         //fetching just the quote from whole lot of data
             })
             .catch((error) => {
                 console.log(error);
